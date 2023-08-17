@@ -1,0 +1,38 @@
+<div class="menu shadow">
+    <a routerLink="/" style="text-decoration: none;cursor: pointer;" class="p-2 text-center mr-5">
+        <img src="./assets/img/logo.png" class="mt-1 mb-1" width="150px" alt="">
+    </a>
+
+    <a routerLink="/dashboard" style="text-decoration: none;cursor: pointer;" class="p-2 text-center">
+        <img src="./assets/img/home.png" class="mt-1 mb-1" width="40px" alt=""><br>
+        <h5 class="text-dark">Inicio</h5>
+    </a>
+
+    <a routerLink="/categories" style="text-decoration: none;cursor: pointer;" class="p-2 text-center">
+        <img src="./assets/img/tags.png" class="mt-1 mb-1" width="40px" alt=""><br>
+        <h5 class="text-dark">Categorias</h5>
+    </a>
+
+    <a routerLink="/contents" style="text-decoration: none;cursor: pointer;" class="p-2 text-center">
+        <img src="./assets/img/bible.png" class="mt-1 mb-1" width="40px" alt=""><br>
+        <h5 class="text-dark">Contenido</h5>
+    </a>
+
+    <a routerLink="/users" style="text-decoration: none;cursor: pointer;" class="p-2 text-center">
+        <img src="./assets/img/users.png" class="mt-1 mb-1" width="40px" alt=""><br>
+        <h5 class="text-dark">Usuarios</h5>
+    </a>
+
+    <a style="text-decoration:none;cursor: pointer;" class="p-2 text-center" data-bs-toggle="modal" data-bs-target="#changePassword">
+        <img src="./assets/img/settings.png" class="mt-1 mb-1" width="40px" alt=""><br>
+        <h5 class="text-dark">Configuración</h5>
+    </a>
+
+    <a (click)="salir()" style="text-decoration: none;cursor: pointer;" class="p-2 text-center ml-5">
+        <img src="./assets/img/off.png" class="mt-1 mb-1" width="40px" alt=""><br>
+        <h5 class="text-dark">Salir</h5>
+    </a>
+
+</div>
+
+<app-modal-password></app-modal-password>

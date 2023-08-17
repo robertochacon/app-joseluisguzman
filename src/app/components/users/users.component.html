@@ -1,0 +1,115 @@
+<!-- <app-navbarinto></app-navbarinto> -->
+
+<div class="row justify-content-center without-borders">
+
+    <app-submenu [page]="'users'"></app-submenu>
+
+    <div class="col-lg-10 col-md-10 col-sm-12">
+
+        <div class="container pl-1 pr-1 pt-4 pb-1 text-center" *ngIf="action==='list'">
+
+            <div class="mt-2 d-flex justify-content-between align-items-center">
+                <div class="">
+                    <h3>Lista de usuarios</h3>
+                </div>
+                <div class="col-lg-0 text-start">
+                    <p class="btn btn-primary mt-1" (click)="role='admin';action='register'"><i class="fa-solid fa-plus d-lg-none d-md-none d-sm-block"></i><span class="d-none d-lg-block d-md-block"><i class="fa-solid fa-plus"></i> Registrar usuario</span></p>
+                </div>
+            </div>
+
+            <div *ngIf="!loading" class="bg-light p-3 border shadow table-responsive">
+                <table class="table table-hover responsive" id="listUsers" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Email</th>
+                            <th>Nombre</th>
+                            <th>Fecha</th>
+                            <th>Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of allUsers" class="text-start">
+                            <td><i class="fa-solid fa-user mr-2 text-black"></i></td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.name}}</td>
+                            <td>{{user.created_at | date:'dd/MM/yyyy'}}</td>
+                            <td>
+                                <button class="btn btn-info shadow" (click)="details=user;setUpdate();action='register'"><i class="fa-solid fa-pen-to-square"></i></button>
+                                <button class="btn btn-danger shadow ml-1" (click)="delete(user.id)"><i class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div *ngIf="loading" class="spinner-border text-secondary mt-5" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+
+        </div>
+
+        <div class="container pl-1 pr-1 pt-4 pb-1" *ngIf="action==='register'">
+            <div class="row mt-2 d-flex align-items-center">
+                <div class="col-10 text-start">
+                    <h3 *ngIf="details == null">Registro de usuario</h3>
+                    <h3 *ngIf="details != null">Actualizar usuario</h3>
+
+                </div>
+                <div class="col-2 text-end">
+                    <p class="btn btn-secondary mt-1" (click)="action='list';reloadDataTable()"><span><i class="fa-solid fa-arrow-left"></i></span></p>
+                </div>
+            </div>
+            <div class="row justify-content-around allscreen">
+
+                <div class="col-lg-5 col-md-5 col-sm-10 text-center d-none d-lg-block d-md-block">
+                    <img src="./assets/img/add_documents.svg" alt="" width="60%">
+                    <h2></h2>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 shadow text-start border-radio pt-3 border">
+                    <div class="alert alert-success" role="alert" *ngIf="result === 'ok'">
+                        Registro completado.
+                    </div>
+                    <div class="alert alert-danger" role="alert" *ngIf="result === 'fail'">
+                        No se pudo completar su registro.
+                    </div>
+                    <h5>Información general</h5>
+                    <div class="form-group mt-3 mb-3">
+                        <label>Email</label>
+                        <input type="text" [(ngModel)]="email" class="form-control shadow" maxLength="100" placeholder="Digite un correo">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Nombre</label>
+                        <input type="text" [(ngModel)]="name" class="form-control shadow" maxLength="100" placeholder="Digite un nombre">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Clave</label>
+                        <input type="text" [(ngModel)]="password" class="form-control shadow" minlength="6" maxLength="100" placeholder="Digite una clave"> La clave debe tener al menos 6 caracteres
+                    </div>
+                    <button *ngIf="!loading && details == null" [disabled]="name===''" class="btn btn-success btn-block btn-lg mt-3 mb-3 shadow" (click)="save()">
+                        Registrar
+                    </button>
+                    <button *ngIf="!loading && details != null" [disabled]="name===''" class="btn btn-success btn-block btn-lg mt-3 mb-3 shadow" (click)="update()">
+                        Actualizar
+                    </button>
+                    <button *ngIf="loading" class="btn btn-success btn-block btn-lg mt-3 mb-3 shadow" (click)="save()">
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        Registrando...
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- <div class="d-flex justify-content-center align-items-center text-center d-sm-block d-lg-none d-md-none" style="height:100vh;">
+    <div>
+        <img class="mb-3" src="./assets/img/devices.svg" width="80%" alt="">
+        <h2 class="mb-3">Utilice una tableta o una pc para visualizar contenido.</h2>
+        <a routerLink="/" class="btn btn-success shadow">Pagina principal</a>
+    </div>
+</div> -->
