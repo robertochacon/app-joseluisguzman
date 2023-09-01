@@ -1,0 +1,66 @@
+<div class="fc col-12 bg-color" *ngIf="step=='1'">
+
+    <div class="col-12 text-center m-0 p-0" style="height: 90vh;">
+        <div class="col-12 justify-content-center" style="height: 20vh;display: flex;align-items: center;background-color: #f4c05f;">
+            <img src="./assets/img/llamanega.webp" width="100px" alt="">
+        </div>
+
+        <div class="text-start p-4">
+            <h5 class="mt-3"><b>Mi diario</b></h5>
+            <h5 class="mt-3"><b>Reconocimientos</b></h5>
+            <h5 class="mt-3"><b>Evaluación</b></h5>
+        </div>
+
+    </div>
+
+    <div style="height: 10vh;">
+        <app-menuinside></app-menuinside>
+    </div>
+
+</div>
+
+
+<div class="col-12 m-0 p-0" style="height: 100vh;" *ngIf="step=='2'">
+
+    <div class="text-center p-0 m-0" style="height: 90vh;">
+
+        <div class="col-12 text-center">
+            <div class="col-12 text-end p-3" style="width: 100%;position: fixed;top:0px;">
+                <svg data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            </div>
+            <div class="row justify-content-center" style="margin:0px;padding:0px;">
+                <div style="width:100%;height: 150px;background: url('./assets/img/player.jpg');background-size: cover;"></div>
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                    <img src="./assets/img/logo.png" class="shadow bg-white" alt="" width="200px" height="200px" style="margin-top:-100px;border-radius: 100%">
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-10 text-center">
+                    <br><b><h2>PREFIERO A CRISTO</h2></b>
+                </div>
+            </div>
+            <!-- <div style="background: url('./assets/img/bgheadstart.webp')"></div> -->
+            <!-- <img src="./assets/img/bgheadstart.webp" width="100%" alt=""> -->
+        </div>
+
+        <div class="col-12 text-center" style="background: url('./assets/img/bghome.png');background-repeat: no-repeat;background-size: cover;background-position: center;">
+
+        </div>
+
+    </div>
+
+    <div style="height: 10vh;">
+        <app-menuinside></app-menuinside>
+    </div>
+
+</div>
+
+
+
+<div style="width: 100%;" class="offcanvas offcanvas-end bg-color" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel">Otras cosas</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        ...
+    </div>
+</div>

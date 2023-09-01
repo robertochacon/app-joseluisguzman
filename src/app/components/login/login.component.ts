@@ -12,9 +12,12 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 export class LoginComponent implements OnInit {
 
   loginError = false;
-  email = "admin@gmail.com";
-  password = "admin";
+  // email = "admin@gmail.com";
+  // password = "admin";
+  email = "ejemplo@gmail.com";
+  password = "ejemplo";
   loading = false;
+  step:any = 1;
   
   constructor(private _authentication: AuthenticationService, private router: Router) { }
 
@@ -34,8 +37,8 @@ export class LoginComponent implements OnInit {
       
         setTimeout(() => {
           this.loading = false;
-          if (response.access_token.user.role == 'seller') {
-            this.router.navigate(["/invoice_quote"]);
+          if (response.access_token.user.role == 'user') {
+            this.router.navigate(["/start"]);
           }else{
             this.router.navigate(["/dashboard"]);
           }

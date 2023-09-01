@@ -1,47 +1,55 @@
 <!-- <app-navbar></app-navbar> -->
 
-<div class="row justify-content-center">
-    <div class="col-12 fc_login" style="background: url('./assets/img/fondo.jpg');background-attachment: fixed;background-position: bottom;background-repeat: no-repeat;background-size: cover;">
-        <div class="">
 
-            <div class="row justify-content-center allscreen pt-5">
+<div class="col-12 fc_login" *ngIf="step=='1'" style="background: url('./assets/img/bgstart.png');background-attachment: fixed;background-position: bottom;background-repeat: no-repeat;background-size: 100% 100%;">
 
-                <div class="col-lg-4 col-md-5 col-sm-10 shadow bg-light p-4 border-radio">
-
-                    <div class="row justify-content-center pt-5">
-                        <div class="col-lg-8 col-md-8 col-sm-10 text-center">
-                            <img src="./assets/img/logo.png" class="" alt="" width="300px" style="border-radius: 10px 10px;">
-                            <br><br><b><h2>Prefiero a cristo</h2></b><br>
-                        </div>
-                    </div>
-
-                    <div class="alert alert-danger" role="alert" *ngIf="loginError">
-                        Su identificacion o su clave esta incorrecta, verifique y vuelva a intentar
-                    </div>
-                    <label for=""><h5>Email</h5></label>
-                    <input type="text" [(ngModel)]="email" class="form-control shadow mb-3" maxLength="100" placeholder="Digite su identificacion">
-                    <label for=""><h5>Contraseñas</h5></label>
-                    <input type="password" [(ngModel)]="password" class="form-control shadow mb-3" maxLength="100" placeholder="Digite su clave">
-                    <button *ngIf="!loading" class="btn btn-primary btn-block btn-lg mt-3 shadow" [disabled]="email === '' && password === ''" (click)="login()">
-                        Ingresar
-                    </button>
-                    <button *ngIf="loading" class="btn btn-primary btn-block btn-lg mt-3 shadow">
-                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                        Ingresando...
-                    </button>
-                </div>
-
-            </div>
-
-        </div>
+    <div class="col-12 text-center" style="height: 50vh;display: flex;align-items: center;">
+        <img src="./assets/img/topstart.png" width="100%" alt="">
     </div>
-    <!-- <div class="col-7 fc">
-        <div class="">
+    <div class="col-12 justify-content-center" style="height: 50vh;display: flex;align-items: center;">
+        <section class="text-center text-white mt-5">
+            <article>
+                <h1 class="text-white">Encendamos nuestra</h1>
+                <h1 class="text-white">pasión por Cristo</h1>
+            </article>
+            <br>
+            <article>
+                <p>Sumerge tu corazón en el fuego de su <br> Espiritu Santo</p>
+            </article>
 
-            <div class="row justify-content-center allscreen pt-5">
+            <button type="button" (click)="step='2'" class="btn btn-warning pl-5 pr-5"><b>ACEDER</b></button>
 
+        </section>
+    </div>
+
+</div>
+
+<div class="col-12 fc_login" *ngIf="step=='2'" style="background: url('./assets/img/bglogin2.png');background-attachment: fixed;background-position: bottom;background-repeat: no-repeat;background-size: cover;padding-top: 450px;">
+
+    <div class="row justify-content-center p-0 m-0">
+
+        <div class="col-10 p-4 border-radio">
+
+            <div class="alert alert-danger" role="alert" *ngIf="loginError">
+                Su identificacion o su clave esta incorrecta, verifique y vuelva a intentar
             </div>
-
+            <label for=""><h6>Email</h6></label>
+            <input type="text" [(ngModel)]="email" class="form-control shadow mb-2" maxLength="100" placeholder="Digite su identificacion">
+            <label for=""><h6>Contraseñas</h6></label>
+            <input type="password" [(ngModel)]="password" class="form-control shadow mb-2" maxLength="100" placeholder="Digite su clave">
+            <button *ngIf="!loading" class="btn btn-warning btn-block btn-lg mt-3 shadow" [disabled]="email === '' && password === ''" (click)="login()">
+                Ingresar
+            </button>
+            <button *ngIf="loading" class="btn btn-warning btn-block btn-lg mt-3 shadow">
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Ingresando...
+            </button>
+            <div class="col-12 text-center">
+                o
+                <br> CREAR CUENTA
+            </div>
         </div>
-    </div> -->
+
+    </div>
+
 </div>

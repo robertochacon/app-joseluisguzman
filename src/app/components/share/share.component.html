@@ -1,0 +1,24 @@
+<div class="fc col-12 bg-color" *ngIf="step=='1'">
+
+    <div class="col-12 justify-content-center m-0 p-0" style="height: 90vh;display: flex;align-items: center;">
+
+        <div>
+            <div class="col-12 text-center justify-content-center">
+
+                <h4><b>Comunidad</b></h4>
+
+                <div>
+                    <img src="./assets/img/iconllama.png" width="80px" alt="">
+                </div>
+                <img src="./assets/img/sharewithpersons.webp" width="200px" alt="">
+            </div>
+            <button type="button" (click)="step='2'" class="btn btn-warning mt-5 pl-5 pr-5"><b>Copiar enlace de invitacion</b></button>
+        </div>
+
+    </div>
+
+    <div style="height: 10vh;">
+        <app-menuinside></app-menuinside>
+    </div>
+
+</div>

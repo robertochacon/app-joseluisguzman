@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ProfileComponent } from './components/profile/profile.component';
+import { StartComponent } from './components/start/start.component';
+import { ShareComponent } from './components/share/share.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { UsersComponent } from './components/users/users.component';
 import { ServicesComponent } from './components/services/services.component';
@@ -13,6 +16,9 @@ const routes: Routes = [
   {path: '', component: LoginComponent},
   // {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'profile', component: ProfileComponent},
+  {path: 'start', component: StartComponent},
+  {path: 'share', component: ShareComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'services', component: ServicesComponent},
   {path: 'users', component: UsersComponent},

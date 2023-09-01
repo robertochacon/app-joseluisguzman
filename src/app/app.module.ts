@@ -20,6 +20,10 @@ import { ContentsComponent } from './components/contents/contents.component';
 import { GuideComponent } from './components/guide/guide.component';
 import { GuideContentsComponent } from './components/guide-contents/guide-contents.component';
 import { SafePipe } from './safe.pipe';
+import { StartComponent } from './components/start/start.component';
+import { MenuinsideComponent } from './components/menuinside/menuinside.component';
+import { ShareComponent } from './components/share/share.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -41,6 +45,10 @@ const maskConfig: Partial<IConfig> = {
     GuideComponent,
     GuideContentsComponent,
     SafePipe,
+    StartComponent,
+    MenuinsideComponent,
+    ShareComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
