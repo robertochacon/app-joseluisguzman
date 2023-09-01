@@ -26,12 +26,12 @@
 
 <div class="col-12 fc_login" *ngIf="step=='2'" style="background: url('./assets/img/bglogin2.png');background-attachment: fixed;background-position: bottom;background-repeat: no-repeat;background-size: cover;padding-top: 450px;">
 
-    <div class="row justify-content-center p-0 m-0">
+    <div class="row justify-content-center mt-3 p-0 m-0">
 
         <div class="col-10 p-4 border-radio">
 
             <div class="alert alert-danger" role="alert" *ngIf="loginError">
-                Su identificacion o su clave esta incorrecta, verifique y vuelva a intentar
+                Su email o su clave esta incorrecta, verifique y vuelva a intentar
             </div>
             <label for=""><h6>Email</h6></label>
             <input type="text" [(ngModel)]="email" class="form-control shadow mb-2" maxLength="100" placeholder="Digite su identificacion">

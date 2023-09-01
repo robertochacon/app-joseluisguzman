@@ -34,8 +34,6 @@
                     <br><b><h2>PREFIERO A CRISTO</h2></b>
                 </div>
             </div>
-            <!-- <div style="background: url('./assets/img/bgheadstart.webp')"></div> -->
-            <!-- <img src="./assets/img/bgheadstart.webp" width="100%" alt=""> -->
         </div>
 
         <div class="col-12 text-center" style="background: url('./assets/img/bghome.png');background-repeat: no-repeat;background-size: cover;background-position: center;">
@@ -43,16 +41,124 @@
                 <img (click)="minutePrayer()" class="mr-5" src="./assets/img/forma1.png" width="100px" alt="" style="background-color: #e88531;border-radius: 100%;">
             </div>
             <div class="col-12 p-2">
-                <img (click)="minutePrayer()" class="ml-3" src="./assets/img/forma2.png" width="100px" alt="" style="background-color: #0f3047;border-radius: 100%;">
+                <img (click)="readingTime()" class="ml-3" src="./assets/img/forma2.png" width="100px" alt="" style="background-color: #0f3047;border-radius: 100%;">
             </div>
             <div class="col-12 p-2">
-                <img (click)="minutePrayer()" class="ml-5" src="./assets/img/forma3.png" width="100px" alt="" style="background-color: #c63a32;border-radius: 100%;">
+                <img (click)="songs()" class="ml-5" src="./assets/img/forma3.png" width="100px" alt="" style="background-color: #c63a32;border-radius: 100%;">
             </div>
             <div class="col-12 p-2">
                 <img (click)="minutePrayer()" class="" src="./assets/img/forma4.png" width="100px" alt="" style="background-color: #f4c05f;border-radius: 100%;">
             </div>
         </div>
 
+    </div>
+
+    <div style="height: 10vh;">
+        <app-menuinside></app-menuinside>
+    </div>
+
+</div>
+
+<div class="fc col-12 bg-color" *ngIf="step=='minutePrayer'">
+
+    <div class="col-12 text-center m-0 p-0" style="height: 90vh;">
+        <div class="col-12 text-center" style="height: 50vh;display: flex;align-items: center;">
+            <img src="./assets/img/oracion.png" width="100%" alt="">
+        </div>
+        <div class="row justify-content-center p-0 m-0">
+            <div class="col-5 p-2">
+                <div routerLink="/guide-contents/1/Peticiones de Oracion" class="container p-3 pt-4 pb-4 rounded" style="background-color: #e88531;">
+                    <p><b>Peticiones de Oracion</b></p>
+                </div>
+            </div>
+            <div class="col-5 p-2">
+                <div routerLink="/guide-contents/2/Oracion para la familiar" class="container p-3 pt-4 pb-4 rounded text-white" style="background-color: #0f3047;">
+                    <p><b>Oracion para la familiar</b></p>
+                </div>
+            </div>
+            <div class="col-5 p-2">
+                <div routerLink="/guide-contents/3/Oraciones por el prójimo" class="container p-3 pt-4 pb-4 rounded text-white" style="background-color: #c63a32;">
+                    <p><b>Oraciones por el prójimo</b></p>
+                </div>
+            </div>
+            <div class="col-5 p-2">
+                <div routerLink="/guide-contents/4/Oraciones por situaciones" class="container p-3 pt-4 pb-4 rounded" style="background-color: #f4c05f;">
+                    <p><b>Oraciones por situaciones</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 10vh;">
+        <app-menuinside></app-menuinside>
+    </div>
+
+</div>
+
+<div class="fc col-12 bg-color" *ngIf="step=='readingTime'">
+
+    <div class="col-12 text-center m-0 p-0" style="height: 90vh;">
+        <div class="col-12 text-center" style="height: 50vh;display: flex;align-items: center;">
+            <img src="./assets/img/bible.webp" width="100%" alt="">
+        </div>
+        <div class="row justify-content-center p-0 m-0">
+            <div class="col-5 p-2">
+                <div routerLink="/guide-contents/5/Lecturas inspiradoras" class="container p-3 pt-4 pb-4 rounded" style="background-color: #e88531;">
+                    <p><b>Lecturas inspiradoras</b></p>
+                </div>
+            </div>
+            <div class="col-5 p-2">
+                <div routerLink="/guide-contents/6/Temas de Crecimeinto" class="container p-3 pt-4 pb-4 rounded text-white" style="background-color: #0f3047;">
+                    <p><b>Temas de Crecimeinto</b></p>
+                </div>
+            </div>
+            <div class="col-5 p-2">
+                <div routerLink="/guide-contents/7/Relacion con Dios" class="container p-3 pt-4 pb-4 rounded text-white" style="background-color: #c63a32;">
+                    <p><b>Relacion con Dios</b></p>
+                </div>
+            </div>
+            <div class="col-5 p-2">
+                <div routerLink="/guide-contents/8/Convivenvia" class="container p-3 pt-4 pb-4 rounded" style="background-color: #f4c05f;">
+                    <p><b>Convivenvia</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 10vh;">
+        <app-menuinside></app-menuinside>
+    </div>
+
+</div>
+
+<div class="fc col-12 bg-color" *ngIf="step=='songs'">
+
+    <div class="col-12 text-center m-0 p-0" style="height: 90vh;">
+        <div class="col-12 text-center" style="height: 50vh;display: flex;align-items: center;">
+            <img src="./assets/img/bible.webp" width="100%" alt="">
+        </div>
+        <div class="row justify-content-center p-0 m-0">
+            <div class="col-5 p-2">
+                <div routerLink="/guide-contents/9/Adoración" class="container p-3 pt-4 pb-4 rounded" style="background-color: #e88531;">
+                    <p><b>Adoración</b></p>
+                </div>
+            </div>
+            <div class="col-5 p-2">
+                <div routerLink="/guide-contents/10/Contemporánea" class="container p-3 pt-4 pb-4 rounded text-white" style="background-color: #0f3047;">
+                    <p><b>Contemporánea</b></p>
+                </div>
+            </div>
+            <div class="col-5 p-2">
+                <div routerLink="/guide-contents/11/Hip Hoy y Rap" class="container p-3 pt-4 pb-4 rounded text-white" style="background-color: #c63a32;">
+                    <p><b>Hip Hoy y Rap</b></p>
+                </div>
+            </div>
+            <div class="col-5 p-2">
+                <div routerLink="/guide-contents/12/Himnos" class="container p-3 pt-4 pb-4 rounded" style="background-color: #f4c05f;">
+                    <p><b>Himnos</b></p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div style="height: 10vh;">

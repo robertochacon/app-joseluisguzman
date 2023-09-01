@@ -26,11 +26,39 @@ export class StartComponent implements OnInit {
       confirmButtonText: 'Habla con Dios'
     }).then((result) => {
       if (result.isConfirmed) {
-        // Swal.fire(
-        //   'Deleted!',
-        //   'Your file has been deleted.',
-        //   'success'
-        // )
+        this.step = 'minutePrayer';
+      }
+    })
+  }
+
+  readingTime(){
+    Swal.fire({
+      title: 'Tiempo de Lectura',
+      text: "Hagamos crecer la llama alcanzado conocimientos",
+      color: 'white',
+      background: '#0f3047',
+      showCancelButton: false,
+      confirmButtonColor: '#e9e2bc',
+      confirmButtonText: 'Conoce de Dios'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.step = 'readingTime';
+      }
+    })
+  }
+
+  songs(){
+    Swal.fire({
+      title: 'Canciones',
+      text: "Haga que  la unción de Dios arda a traves de la musica en su corazón",
+      color: 'white',
+      background: '#c63a32',
+      showCancelButton: false,
+      confirmButtonColor: '#e9e2bc',
+      confirmButtonText: 'Alabemos'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.step = 'songs';
       }
     })
   }

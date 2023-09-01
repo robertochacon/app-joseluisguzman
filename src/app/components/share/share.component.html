@@ -13,6 +13,9 @@
                 <img src="./assets/img/sharewithpersons.webp" width="200px" alt="">
             </div>
             <button type="button" (click)="step='2'" class="btn btn-warning mt-5 pl-5 pr-5"><b>Copiar enlace de invitacion</b></button>
+            <div class="col-12 b text-center mt-4">
+                <qrcode [qrdata]="ipLocal" [width]="200" [errorCorrectionLevel]="'M'"></qrcode>
+            </div>
         </div>
 
     </div>

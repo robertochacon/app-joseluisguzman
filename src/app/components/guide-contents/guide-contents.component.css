@@ -1,0 +1,11 @@
+.bg-color {
+    background: rgb(254, 215, 163);
+    background: linear-gradient(0deg, rgba(254, 215, 163, 1) 0%, rgba(252, 242, 244, 1) 100%);
+}
+
+.fc {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100vh;
+}

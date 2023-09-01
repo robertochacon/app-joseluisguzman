@@ -8,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class ShareComponent implements OnInit {
 
   step:any = '1';
+  ipLocal: string = 'Digita tu ip'+'/guide';
   
   constructor() { }
 
   ngOnInit(): void {
+    this.ipLocal = document.location.protocol + "//" + document.location.hostname + ":" + document.location.port;
   }
 
 }
