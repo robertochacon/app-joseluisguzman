@@ -1,13 +1,17 @@
 <div class="fc col-12 bg-color" *ngIf="step=='1'">
 
     <div class="col-12 text-center m-0 p-0" style="height: 90vh;">
-        <div class="col-12 text-center" style="height: 50vh;display: flex;align-items: center;">
-            <img src="./assets/img/hoguera.png" width="100%" alt="">
+        <div class="col-12 text-center justify-content-center" style="height: 40vh;display: flex;align-items: center;">
+            <img src="./assets/img/hoguera.png" width="80%" alt="">
         </div>
-        <h4 class="text-center p-4">
-            !La pasión por Dios se cultiva diario! Para crear tu propio récord de racha basta con que hagamos cualquiera de las actividades que tenemos para ti.
-        </h4>
-        <button type="button" (click)="step='2'" class="btn btn-warning pl-5 pr-5"><b>Comenzar</b></button>
+        <div class="col-12 text-center justify-content-center" style="height: 50vh;">
+            <h6 class="col-11 text-center p-5">
+                !La pasión por Dios se cultiva diario! Para crear tu propio récord de racha basta con que hagamos cualquiera de las actividades que tenemos para ti.
+            </h6>
+
+            <button type="button" (click)="step='2'" class="btn btn-warning pl-5 pr-5" style="background-color: #f7903c;">Comenzar</button>
+
+        </div>
     </div>
 
     <div style="height: 10vh;">
@@ -26,28 +30,29 @@
                 <svg data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
             </div>
             <div class="row justify-content-center" style="margin:0px;padding:0px;">
-                <div style="width:100%;height: 150px;background: url('./assets/img/player.jpg');background-size: cover;"></div>
+                <div style="width:100%;height: 90px;background: url('./assets/img/player.jpg');background-size: cover;"></div>
                 <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-                    <img src="./assets/img/logo.png" class="shadow bg-white" alt="" width="200px" height="200px" style="margin-top:-100px;border-radius: 100%">
+                    <img src="./assets/img/logo.png" class="shadow bg-white" alt="" width="100px" height="100px" style="margin-top:-60px;border-radius: 100%">
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-10 text-center">
-                    <br><b><h2>PREFIERO A CRISTO</h2></b>
+                    <br>
+                    <h2>PREFIERO A CRISTO</h2>
                 </div>
             </div>
         </div>
 
         <div class="col-12 text-center" style="background: url('./assets/img/bghome.png');background-repeat: no-repeat;background-size: cover;background-position: center;">
             <div class="col-12 p-2">
-                <img (click)="minutePrayer()" class="mr-5" src="./assets/img/forma1.png" width="100px" alt="" style="background-color: #e88531;border-radius: 100%;">
+                <img (click)="minutePrayer()" class="mr-5" src="./assets/img/forma1.png" width="80px" alt="" style="background-color: #e88531;border-radius: 100%;">
             </div>
             <div class="col-12 p-2">
-                <img (click)="readingTime()" class="ml-3" src="./assets/img/forma2.png" width="100px" alt="" style="background-color: #0f3047;border-radius: 100%;">
+                <img (click)="readingTime()" class="ml-3" src="./assets/img/forma2.png" width="80px" alt="" style="background-color: #0f3047;border-radius: 100%;">
             </div>
             <div class="col-12 p-2">
-                <img (click)="songs()" class="ml-5" src="./assets/img/forma3.png" width="100px" alt="" style="background-color: #c63a32;border-radius: 100%;">
+                <img (click)="songs()" class="ml-5" src="./assets/img/forma3.png" width="80px" alt="" style="background-color: #c63a32;border-radius: 100%;">
             </div>
             <div class="col-12 p-2">
-                <img (click)="minutePrayer()" class="" src="./assets/img/forma4.png" width="100px" alt="" style="background-color: #f4c05f;border-radius: 100%;">
+                <img (click)="exercises()" class="" src="./assets/img/forma4.png" width="80px" alt="" style="background-color: #f4c05f;border-radius: 100%;">
             </div>
         </div>
 
@@ -62,28 +67,28 @@
 <div class="fc col-12 bg-color" *ngIf="step=='minutePrayer'">
 
     <div class="col-12 text-center m-0 p-0" style="height: 90vh;">
-        <div class="col-12 text-center" style="height: 50vh;display: flex;align-items: center;">
-            <img src="./assets/img/oracion.png" width="100%" alt="">
+        <div class="col-12 justify-content-center" style="height: 40vh;display: flex;align-items: center;">
+            <img src="./assets/img/oracion.png" width="80%" alt="">
         </div>
         <div class="row justify-content-center p-0 m-0">
             <div class="col-5 p-2">
                 <div routerLink="/guide-contents/1/Peticiones de Oracion" class="container p-3 pt-4 pb-4 rounded" style="background-color: #e88531;">
-                    <p><b>Peticiones de Oracion</b></p>
+                    <p>Peticiones de Oracion</p>
                 </div>
             </div>
             <div class="col-5 p-2">
                 <div routerLink="/guide-contents/2/Oracion para la familiar" class="container p-3 pt-4 pb-4 rounded text-white" style="background-color: #0f3047;">
-                    <p><b>Oracion para la familiar</b></p>
+                    <p>Oracion para la familiar</p>
                 </div>
             </div>
             <div class="col-5 p-2">
                 <div routerLink="/guide-contents/3/Oraciones por el prójimo" class="container p-3 pt-4 pb-4 rounded text-white" style="background-color: #c63a32;">
-                    <p><b>Oraciones por el prójimo</b></p>
+                    <p>Oraciones por el prójimo</p>
                 </div>
             </div>
             <div class="col-5 p-2">
                 <div routerLink="/guide-contents/4/Oraciones por situaciones" class="container p-3 pt-4 pb-4 rounded" style="background-color: #f4c05f;">
-                    <p><b>Oraciones por situaciones</b></p>
+                    <p>Oraciones por situaciones</p>
                 </div>
             </div>
         </div>
@@ -98,28 +103,28 @@
 <div class="fc col-12 bg-color" *ngIf="step=='readingTime'">
 
     <div class="col-12 text-center m-0 p-0" style="height: 90vh;">
-        <div class="col-12 text-center" style="height: 50vh;display: flex;align-items: center;">
+        <div class="col-12 text-center" style="height: 40vh;display: flex;align-items: center;">
             <img src="./assets/img/bible.webp" width="100%" alt="">
         </div>
         <div class="row justify-content-center p-0 m-0">
             <div class="col-5 p-2">
                 <div routerLink="/guide-contents/5/Lecturas inspiradoras" class="container p-3 pt-4 pb-4 rounded" style="background-color: #e88531;">
-                    <p><b>Lecturas inspiradoras</b></p>
+                    <p>Lecturas inspiradoras</p>
                 </div>
             </div>
             <div class="col-5 p-2">
                 <div routerLink="/guide-contents/6/Temas de Crecimeinto" class="container p-3 pt-4 pb-4 rounded text-white" style="background-color: #0f3047;">
-                    <p><b>Temas de Crecimeinto</b></p>
+                    <p>Temas de Crecimeinto</p>
                 </div>
             </div>
             <div class="col-5 p-2">
                 <div routerLink="/guide-contents/7/Relacion con Dios" class="container p-3 pt-4 pb-4 rounded text-white" style="background-color: #c63a32;">
-                    <p><b>Relacion con Dios</b></p>
+                    <p>Relacion con Dios</p>
                 </div>
             </div>
             <div class="col-5 p-2">
                 <div routerLink="/guide-contents/8/Convivenvia" class="container p-3 pt-4 pb-4 rounded" style="background-color: #f4c05f;">
-                    <p><b>Convivenvia</b></p>
+                    <p>Convivenvia</p>
                 </div>
             </div>
         </div>
@@ -134,28 +139,67 @@
 <div class="fc col-12 bg-color" *ngIf="step=='songs'">
 
     <div class="col-12 text-center m-0 p-0" style="height: 90vh;">
-        <div class="col-12 text-center" style="height: 50vh;display: flex;align-items: center;">
+        <div class="col-12 text-center" style="height: 40vh;display: flex;align-items: center;">
             <img src="./assets/img/bible.webp" width="100%" alt="">
         </div>
         <div class="row justify-content-center p-0 m-0">
             <div class="col-5 p-2">
                 <div routerLink="/guide-contents/9/Adoración" class="container p-3 pt-4 pb-4 rounded" style="background-color: #e88531;">
-                    <p><b>Adoración</b></p>
+                    <p>Adoración</p>
                 </div>
             </div>
             <div class="col-5 p-2">
                 <div routerLink="/guide-contents/10/Contemporánea" class="container p-3 pt-4 pb-4 rounded text-white" style="background-color: #0f3047;">
-                    <p><b>Contemporánea</b></p>
+                    <p>Contemporánea</p>
                 </div>
             </div>
             <div class="col-5 p-2">
                 <div routerLink="/guide-contents/11/Hip Hoy y Rap" class="container p-3 pt-4 pb-4 rounded text-white" style="background-color: #c63a32;">
-                    <p><b>Hip Hoy y Rap</b></p>
+                    <p>Hip Hoy y Rap</p>
                 </div>
             </div>
             <div class="col-5 p-2">
                 <div routerLink="/guide-contents/12/Himnos" class="container p-3 pt-4 pb-4 rounded" style="background-color: #f4c05f;">
-                    <p><b>Himnos</b></p>
+                    <p>Himnos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 10vh;">
+        <app-menuinside></app-menuinside>
+    </div>
+
+</div>
+
+<div class="fc col-12 bg-color" *ngIf="step=='exercises'">
+
+    <div class="col-12 text-center m-0 p-0" style="height: 90vh;">
+        <div class="col-12 justify-content-center" style="height: 40vh;display: flex;align-items: center;">
+            <div>
+                <img src="./assets/img/llama2.png" width="100px" alt="">
+                <img src="./assets/img/exercises.webp" width="80%" alt="">
+            </div>
+        </div>
+        <div class="row justify-content-center p-0 m-0">
+            <div class="col-5 p-2">
+                <div routerLink="/guide-contents/9/Adoración" class="container p-3 pt-4 pb-4 rounded" style="background-color: #e88531;">
+                    <p>Rutinas Cardio</p>
+                </div>
+            </div>
+            <div class="col-5 p-2">
+                <div routerLink="/guide-contents/10/Contemporánea" class="container p-3 pt-4 pb-4 rounded text-white" style="background-color: #0f3047;">
+                    <p>Ejercicios de Fuerza</p>
+                </div>
+            </div>
+            <div class="col-5 p-2">
+                <div routerLink="/guide-contents/11/Hip Hoy y Rap" class="container p-3 pt-4 pb-4 rounded text-white" style="background-color: #c63a32;">
+                    <p>Consejos de Nutrición</p>
+                </div>
+            </div>
+            <div class="col-5 p-2">
+                <div routerLink="/guide-contents/12/Himnos" class="container p-3 pt-4 pb-4 rounded" style="background-color: #f4c05f;">
+                    <p>Recetas Saludables</p>
                 </div>
             </div>
         </div>

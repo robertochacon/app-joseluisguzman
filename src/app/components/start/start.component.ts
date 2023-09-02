@@ -63,5 +63,21 @@ export class StartComponent implements OnInit {
     })
   }
 
+  exercises(){
+    Swal.fire({
+      title: 'Cuido mi cuerpo',
+      text: "Maten tu cuerpo que es templo del Espíritu Santo sano y activo",
+      color: 'black',
+      background: '#f4c05f',
+      showCancelButton: false,
+      confirmButtonColor: '#e9e2bc',
+      confirmButtonText: 'Vamos Alla!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.step = 'exercises';
+      }
+    })
+  }
+
 
 }

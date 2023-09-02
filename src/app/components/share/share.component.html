@@ -3,18 +3,18 @@
     <div class="col-12 justify-content-center m-0 p-0" style="height: 90vh;display: flex;align-items: center;">
 
         <div>
-            <div class="col-12 text-center justify-content-center">
+            <div class="col-12 text-center justify-content-center mt-2">
 
                 <h4><b>Comunidad</b></h4>
 
                 <div>
                     <img src="./assets/img/iconllama.png" width="80px" alt="">
                 </div>
-                <img src="./assets/img/sharewithpersons.webp" width="200px" alt="">
+                <img src="./assets/img/sharewithpersons.webp" width="150px" alt="">
             </div>
             <button type="button" (click)="step='2'" class="btn btn-warning mt-5 pl-5 pr-5"><b>Copiar enlace de invitacion</b></button>
             <div class="col-12 b text-center mt-4">
-                <qrcode [qrdata]="ipLocal" [width]="200" [errorCorrectionLevel]="'M'"></qrcode>
+                <qrcode [qrdata]="ipLocal" [width]="150" [errorCorrectionLevel]="'M'"></qrcode>
             </div>
         </div>
 
