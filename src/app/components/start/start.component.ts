@@ -9,10 +9,18 @@ import Swal from 'sweetalert2';
 export class StartComponent implements OnInit {
 
   step:any = '1';
+  start:any = 'false';
 
   constructor() { }
 
   ngOnInit(): void {
+    this.start = localStorage.getItem("start");
+    if (this.start == undefined || this.start=='false') {
+      this.step = '1';
+      localStorage.setItem("start", "true");
+    }else{
+      this.step = '2';
+    }
   }
 
   minutePrayer(){

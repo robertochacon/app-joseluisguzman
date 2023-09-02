@@ -1,0 +1,86 @@
+<div class="fc col-12 bg-color" *ngIf="step=='1'">
+
+    <div class="col-12 text-center m-0 p-0" style="height: 80vh;">
+        <div class="col-12 justify-content-center p-2" style="display: flex;align-items: center;background-color: #f4c05f;">
+            <h5><b>Chat</b></h5>
+        </div>
+
+
+    </div>
+
+
+    <div class="row p-0 m-0 fixed-bottom" style="bottom: 0px;position: absolute;width: 100%;">
+
+        <div class="col-12 text-center m-0 p-2 d-flex bg-white">
+            <input class="form-control p-2" type="text" placeholder="Escriba su mensaje aqui" style="border: none;">
+            <button class="text-white bg-secondary p-2 rounded" style="border: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.8em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M16.1 260.2c-22.6 12.9-20.5 47.3 3.6 57.3L160 376V479.3c0 18.1 14.6 32.7 32.7 32.7c9.7 0 18.9-4.3 25.1-11.8l62-74.3 123.9 51.6c18.9 7.9 40.8-4.5 43.9-24.7l64-416c1.9-12.1-3.4-24.3-13.5-31.2s-23.3-7.5-34-1.4l-448 256zm52.1 25.5L409.7 90.6 190.1 336l1.2 1L68.2 285.7zM403.3 425.4L236.7 355.9 450.8 116.6 403.3 425.4z"/></svg>
+            </button>
+        </div>
+
+        <div class="col-12 row justify-content-around m-0 p-4" style="background-color: #0f3047;">
+            <div class="col-2">
+                <svg routerLink="/profile" xmlns="http://www.w3.org/2000/svg" height="2em" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" version="1.0" viewBox="5.0 6.9 90.0 95.6" zoomAndPan="magnify" style="fill: rgb(255, 255, 255);"
+                    original_string_length="744"><g id="__id154_skg688ctwe"><path d="M65.904,52.834c-4.734,3.725-10.695,5.955-17.172,5.955c-6.316,0-12.146-2.119-16.821-5.68C16.654,55.575,5,68.803,5,84.757 c0,17.711,14.356,6.197,32.065,6.197h25.868C80.643,90.954,95,102.468,95,84.757C95,68.051,82.22,54.333,65.904,52.834z" style="fill: inherit;"/></g><g id="__id155_skg688ctwe"><path d="m48.732 55.057c13.285 0 24.092-10.809 24.092-24.095 0-13.285-10.807-24.094-24.092-24.094s-24.093 10.809-24.093 24.094c1e-3 13.286 10.809 24.095 24.093 24.095z" style="fill: inherit;"/></g></svg>
+            </div>
+            <div class="col-2">
+                <svg routerLink="/start" xmlns="http://www.w3.org/2000/svg" height="2em" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" version="1.0" viewBox="4.0 6.0 40.0 34.0" zoomAndPan="magnify" style="fill: rgb(255, 255, 255);" original_string_length="345"><g id="__id145_skg688ctwe"><path d="M20 40v-12h8v12h10v-16h6l-20-18-20 18h6v16z" style="fill: inherit;"/></g></svg>
+            </div>
+            <div class="col-2">
+                <svg routerLink="/share" xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"/></svg>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <div style="height: 10vh;">
+        <app-menuinside></app-menuinside>
+    </div> -->
+
+</div>
+
+
+<div class="col-12 m-0 p-0" style="height: 100vh;" *ngIf="step=='2'">
+
+    <div class="text-center p-0 m-0" style="height: 90vh;">
+
+        <div class="col-12 text-center">
+            <div class="col-12 text-end p-3" style="width: 100%;position: fixed;top:0px;">
+                <svg data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            </div>
+            <div class="row justify-content-center" style="margin:0px;padding:0px;">
+                <div style="width:100%;height: 150px;background: url('./assets/img/player.jpg');background-size: cover;"></div>
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                    <img src="./assets/img/logo.png" class="shadow bg-white" alt="" width="200px" height="200px" style="margin-top:-100px;border-radius: 100%">
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-10 text-center">
+                    <br><b><h2>PREFIERO A CRISTO</h2></b>
+                </div>
+            </div>
+            <!-- <div style="background: url('./assets/img/bgheadstart.webp')"></div> -->
+            <!-- <img src="./assets/img/bgheadstart.webp" width="100%" alt=""> -->
+        </div>
+
+        <div class="col-12 text-center" style="background: url('./assets/img/bghome.png');background-repeat: no-repeat;background-size: cover;background-position: center;">
+
+        </div>
+
+    </div>
+
+    <div style="height: 10vh;">
+        <app-menuinside></app-menuinside>
+    </div>
+
+</div>
+
+
+
+<div style="width: 100%;" class="offcanvas offcanvas-end bg-color" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel">Otras cosas</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        ...
+    </div>
+</div>
