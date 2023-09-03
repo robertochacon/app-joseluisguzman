@@ -1,53 +1,61 @@
 <div class="fc col-12 bg-color row justify-content-center without-borders p-0 m-0" style="height: 100vh;">
 
-    <div class="col-12 justify-content-center m-0 p-0" style="height: 90vh;overflow-y: scroll;padding-bottom: 100px;">
+    <div class="col-12 text-center m-0 p-0" style="height: 90vh;overflow-y: scroll;padding-bottom: 100px;">
 
         <div class="row justify-content-center m-0 p-0">
-            <div class="col-12 text-center p-3" style="background-color: #e88531;">
+            <div class="col-12 text-center p-1" style="background-color: #e88531;">
                 <b><h2>{{ name || 'PREFIERO A CRISTO' }}</h2></b>
             </div>
         </div>
 
-        <div class="col-lg-8 col-md-10 col-sm-11 p-2 mt-5 text-center m-0 p-0" *ngFor="let content of listContents">
-            <button class="container rounded shadow p-4 text-center" style="background-color: white;border: none;" data-toggle="collapse" [attr.data-target]="'#collapseExample'+content.id" role="button" aria-expanded="false" aria-controls="collapseExample">
-                <img src="./assets/img/llama2.png" width="100px">
-                <h3>{{ content.name }}</h3>
-            </button>
+        <div class="row justify-content-center">
+            <div class="col-10 p-1 mt-3 mb-3 text-center m-0 p-0" *ngFor="let content of listContents" style="margin-top: 100px;">
+                <button class="container justify-content-center rounded shadow p-4 text-center" style="background-color: white;border: none;">
+                    <div class="col-12 text-end">
+                        <img src="./assets/img/opciones2.png" width="50px" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="collapse mb-2" id="collapseExample">
+                            <div class="card card-body">
+                              <b>Compartir</b>
+                              <b>Guardar</b>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 text-center mb-1" *ngIf="category!=3 && content.image != null" data-toggle="collapse" [attr.data-target]="'#collapseExample'+content.id" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <img style="border:2px solid #e88531;" src="{{ content.image+'&output=embed' || './assets/img/sin_foto.png' }}" width="70%" style="border-radius: 10px 10px;">
+                    </div>
+                    <h3>{{ content.name }}</h3>
+                </button>
 
-            <div class="collapse" id="collapseExample{{ content.id }}" style="width:100%;">
-                <div class="card card-body col-12 text-center justify-content-center">
-                    <div class="row justify-content-center">
-                        <div class="col-12 text-center" *ngIf="category==3">
-                            <iframe width="100%" height="315" [src]="content.image| safe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="collapse" id="collapseExample{{ content.id }}" style="width:100%;">
+                    <div class="card card-body col-12 text-center justify-content-center">
+                        <div class="row justify-content-center">
+                            <div class="col-12 text-center" *ngIf="category==3">
+                                <iframe width="100%" height="315" [src]="content.image| safe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
                         </div>
-                        <div class="col-8 text-center" *ngIf="category!=3 && content.image != null">
-                            <img style="border:2px solid #e88531;" src="{{ content.image+'&output=embed' || './assets/img/sin_foto.png' }}" width="100%" style="border-radius: 10px 10px;">
+
+                        <div class="col-12 text-start mt-2" *ngIf="content.description!=null">
+                            <b>Descripcion:</b>
+                            <p>{{ content.description }}</p>
                         </div>
-                    </div>
 
-                    <div class="col-12 text-start mt-2" *ngIf="content.description!=null">
-                        <b>Descripcion:</b>
-                        <p>{{ content.description }}</p>
-                    </div>
+                        <div class="col-12 text-start mt-2">
+                            <!-- <button class="btn btn-warning btn-block">Agregar comentario</button> -->
+                        </div>
 
-                    <div class="col-12 text-start mt-2">
-                        <button class="btn btn-warning btn-block">Agregar comentario</button>
                     </div>
-
-                    <div class="col-12 text-start mt-2">
-                        <b>Comentarios</b>
-                        <p class="text-secondary">Sin comentarios</p>
-                    </div>
-
                 </div>
+
+                <div class="col-12 text-center mt-3">
+                    1 al 10
+                </div>
+
             </div>
 
-
-        </div>
-
-        <div *ngIf="listContents.length<=0" class="alert mt-5 text-center m-0 p-0" role="alert">
-            <img src="./assets/img/empty.svg" width="150px">
-            <h4 class=" text-secondary mt-3">Contenido no disponible</h4>
+            <div *ngIf="listContents.length<=0" class="alert mt-5 text-center m-0 p-0" role="alert">
+                <img src="./assets/img/empty.svg" width="150px">
+                <h4 class=" text-secondary mt-3">Contenido no disponible</h4>
+            </div>
         </div>
 
     </div>

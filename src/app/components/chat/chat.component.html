@@ -4,6 +4,17 @@
         <div class="col-12 justify-content-center p-2" style="display: flex;align-items: center;background-color: #f4c05f;">
             <h5><b>Chat</b></h5>
         </div>
+        <div class="row align-items-around p-1 mt-3">
+            <p class="text-secondary">Hoy</p>
+        </div>
+        <div class="row align-items-around p-2" *ngFor="let chat of chatList[0]">
+            <div class="col-2 justify-content-center">
+                <img src="./assets/img/usuario.png" width="100%" alt="">
+            </div>
+            <div class="col-9 text-start rounded justify-content-center p-2 shadow" style="background-color: #f1f1f1;">
+                {{chat.msg}}
+            </div>
+        </div>
 
 
     </div>

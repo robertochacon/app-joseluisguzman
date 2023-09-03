@@ -18,9 +18,16 @@ export class StartComponent implements OnInit {
     if (this.start == undefined || this.start=='false') {
       this.step = '1';
       localStorage.setItem("start", "true");
+      setTimeout(()=>{
+        this.step = 'plus';
+      },4000);
     }else{
       this.step = '2';
+      setTimeout(()=>{
+        this.step = 'plus';
+      },4000);
     }
+
   }
 
   minutePrayer(){

@@ -25,6 +25,7 @@ import { MenuinsideComponent } from './components/menuinside/menuinside.componen
 import { ShareComponent } from './components/share/share.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ChatComponent } from './components/chat/chat.component';
+import { AcknowledgmentsComponent } from './components/acknowledgments/acknowledgments.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -51,6 +52,7 @@ const maskConfig: Partial<IConfig> = {
     ShareComponent,
     ProfileComponent,
     ChatComponent,
+    AcknowledgmentsComponent,
   ],
   imports: [
     BrowserModule,

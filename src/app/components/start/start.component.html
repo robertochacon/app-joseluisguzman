@@ -222,11 +222,46 @@
 <div class="fc col-12 bg-color" *ngIf="step=='advance'">
 
     <div class="col-12 text-center m-0 p-0" style="height: 90vh;">
-        <div class="col-12 justify-content-center" style="height: 40vh;display: flex;align-items: center;">
-            <div>
-                <img src="./assets/img/llama2.png" width="100px" alt="">
-                <img src="./assets/img/exercises.webp" width="80%" alt="">
+        <div class="col-12 justify-content-center">
+            <img src="./assets/img/llama.png" width="100%" alt="">
+        </div>
+
+    </div>
+
+    <div style="height: 10vh;">
+        <app-menuinside></app-menuinside>
+    </div>
+
+</div>
+
+<div class="fc col-12 bg-color" *ngIf="step=='plus'">
+
+    <div class="col-12 text-center m-0 p-0" style="height: 90vh;overflow: scroll;">
+
+        <div class="row justify-content-center">
+            <div class="col-12 text-end">
+                <button type="button" (click)="step='2'" class="btn-close text-reset pt-3 pr-3"></button>
             </div>
+            <div class="col-2 text-center">
+                <b><p style="width: 60px; background-color: #f1bfa9;padding: 5px;border-radius: 10px 10px;">Plus</p></b>
+            </div>
+            <div class="col-12 text-center">
+                <h3><b>Prefiero a Cristo</b></h3>
+                <p style="font-size: 12px;margin-top: -10px;">Desbloquea todos los beneficios</p>
+                <img src="./assets/img/llama2.png" width="80px" alt="">
+            </div>
+            <div class="col-12 text-start p-5">
+                <h5><b>Prefiero a Cristo</b></h5>
+                <h5><b>Esta aplicación es sana, edificante para mi vida. Ayuda a mi bienestar físico, emocional y espiritual. Me gusta!</b></h5>
+            </div>
+            <div class="col-12 text-center">
+                <button type="button" class="btn btn-warning pl-5 pr-5" style="background-color: #f7903c;">Comenzar gratis 4 días</button>
+            </div>
+            <div class="col-12 text-center mt-2">
+                <h3><b>US 5.99/MES</b></h3>
+                <p style="font-size: 12px;margin-top: -10px;">Solo se te cobrara una vez que finalices el periodo de prueba</p>
+            </div>
+
         </div>
 
     </div>
@@ -246,28 +281,7 @@
     </div>
     <div class="offcanvas-body">
 
-        <div class="row justify-content-center">
-            <div class="col-2 text-center">
-                <b><p style="width: 60px; background-color: #f1bfa9;padding: 5px;border-radius: 10px 10px;">Plus</p></b>
-            </div>
-            <div class="col-12 text-center">
-                <h3><b>Prefiero a Cristo</b></h3>
-                <p style="font-size: 12px;margin-top: -10px;">Desbloquea todos los beneficios</p>
-                <img src="./assets/img/llama2.png" width="80px" alt="">
-            </div>
-            <div class="col-12 text-start p-4">
-                <h4><b>Prefiero a Cristo</b></h4>
-                <h4><b>Esta aplicación es sana, edificante para mi vida. Ayuda a mi bienestar físico, emocional y espiritual. Me gusta!</b></h4>
-            </div>
-            <div class="col-12 text-center">
-                <button type="button" class="btn btn-warning pl-5 pr-5" style="background-color: #f7903c;">Comenzar gratis 4 días</button>
-            </div>
-            <div class="col-12 text-center mt-2">
-                <h3><b>US 5.99/MES</b></h3>
-                <p style="font-size: 12px;margin-top: -10px;">Solo se te cobrara una vez que finalices el periodo de prueba</p>
-            </div>
 
-        </div>
 
 
 
