@@ -11,6 +11,7 @@ export class GuideContentsComponent implements OnInit {
 
   category:any = 0;
   name:any = '';
+  step:any = '1';
   loading = false;
   listContents: any[] = [];
 

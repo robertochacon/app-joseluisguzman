@@ -26,6 +26,7 @@ import { ShareComponent } from './components/share/share.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { AcknowledgmentsComponent } from './components/acknowledgments/acknowledgments.component';
+import { CommunityComponent } from './components/community/community.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -53,6 +54,7 @@ const maskConfig: Partial<IConfig> = {
     ProfileComponent,
     ChatComponent,
     AcknowledgmentsComponent,
+    CommunityComponent,
   ],
   imports: [
     BrowserModule,

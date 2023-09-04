@@ -13,6 +13,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { ContentsComponent } from './components/contents/contents.component';
 import { GuideComponent } from './components/guide/guide.component';
 import { GuideContentsComponent } from './components/guide-contents/guide-contents.component';
+import { CommunityComponent } from './components/community/community.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -30,6 +31,7 @@ const routes: Routes = [
   {path: 'contents', component: ContentsComponent},
   {path: 'guide', component: GuideComponent},
   {path: 'guide-contents/:category/:name', component: GuideContentsComponent},
+  {path: 'community', component: CommunityComponent},
   {path: '**', redirectTo: '/'},
 ];
 
