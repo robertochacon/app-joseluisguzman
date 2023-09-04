@@ -36,9 +36,11 @@
     right: 3%;
     left: 3%;
     overflow-x: scroll;
-    padding: 5px;
-    box-sizing: border-box;
-    background-color: white;
+    /* padding: 5px;
+    box-sizing: border-box; */
+    /* background-color: white; */
+    background: rgb(254, 215, 163);
+    background: linear-gradient(0deg, rgba(254, 215, 163, 1) 0%, rgba(252, 242, 244, 1) 100%);
     display: flex;
     justify-content: center;
     align-items: center;

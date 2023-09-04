@@ -24,12 +24,18 @@
 
 </div>
 
-<div class="col-12 fc_login" *ngIf="step=='2'" style="background: url('./assets/img/bglogin2.png');background-attachment: fixed;background-position: bottom;background-repeat: no-repeat;background-size: 100% 100%;padding-top: 350px;">
+<div class="col-12 fc_login" *ngIf="step=='2'" style="background: url('./assets/img/bglogin.png');background-attachment: fixed;background-position: bottom;background-repeat: no-repeat;background-size: 100% 100%;">
 
-    <div class="row justify-content-center p-0 m-0">
+    <div class="row d-flex align-items-center justify-content-center p-0 m-0" style="height: 100vh;">
 
-        <div class="col-10 p-4 border-radio">
+        <div class="col-lg-4 col-md-6 col-sm-10 p-4 border-radio">
 
+            <div class="col-12 text-center">
+                <img src="./assets/img/iconllama.png" width="100px" alt="">
+            </div>
+            <div class="col-12 text-center">
+                <img src="./assets/img/barra.png" width="100%" alt="">
+            </div>
             <div class="alert alert-danger" role="alert" *ngIf="loginError">
                 Su email o su clave esta incorrecta, verifique y vuelva a intentar
             </div>
@@ -46,7 +52,48 @@
             </button>
             <div class="col-12 text-center">
                 o
-                <br> CREAR CUENTA
+                <br>
+                <p (click)="step='3'">CREAR CUENTA</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="col-12 fc_login" *ngIf="step=='3'" style="background: url('./assets/img/bglogin.png');background-attachment: fixed;background-position: bottom;background-repeat: no-repeat;background-size: 100% 100%;">
+
+    <div class="row d-flex align-items-center justify-content-center p-0 m-0" style="height: 100vh;">
+
+        <div class="col-lg-4 col-md-6 col-sm-10 p-4 border-radio">
+
+            <div class="col-12 text-center">
+                <img src="./assets/img/iconllama.png" width="100px" alt="">
+            </div>
+            <div class="col-12 text-center">
+                <img src="./assets/img/barra.png" width="100%" alt="">
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf="loginError">
+                Su email o su clave esta incorrecta, verifique y vuelva a intentar
+            </div>
+            <label for=""><h6>Nombre</h6></label>
+            <input type="text" [(ngModel)]="email" class="form-control shadow mb-2" maxLength="100" placeholder="Digite su nombre">
+            <label for=""><h6>Contraseñas</h6></label>
+            <label for=""><h6>Email</h6></label>
+            <input type="text" [(ngModel)]="email" class="form-control shadow mb-2" maxLength="100" placeholder="Digite su identificacion">
+            <label for=""><h6>Contraseñas</h6></label>
+            <input type="password" [(ngModel)]="password" class="form-control shadow mb-2" maxLength="100" placeholder="Digite su clave">
+            <button *ngIf="!loading" class="btn btn-warning btn-block btn-lg mt-3 shadow" [disabled]="email === '' && password === ''" (click)="login()">
+                Registrar
+            </button>
+            <button *ngIf="loading" class="btn btn-warning btn-block btn-lg mt-3 shadow">
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Registrando...
+            </button>
+            <div class="col-12 text-center">
+                o
+                <br>
+                <p (click)="step='2'">LOGIN</p>
             </div>
         </div>
 

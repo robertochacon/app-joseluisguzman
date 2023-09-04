@@ -23,7 +23,7 @@
 
 <div class="col-12 m-0 p-0" style="height: 100vh;" *ngIf="step=='2'">
 
-    <div class="text-center p-0 m-0" style="height: 90vh;">
+    <div class="text-center p-0 m-0" style="height: 90vh;background: url('./assets/img/bghome.png');background-repeat: no-repeat;background-size: cover;background-position: center;">
 
         <div class="col-12 text-center">
             <div class="col-12 text-end p-3" style="width: 100%;position: fixed;top:0px;">
@@ -41,7 +41,7 @@
             </div>
         </div>
 
-        <div class="col-12 text-center" style="background: url('./assets/img/bghome.png');background-repeat: no-repeat;background-size: cover;background-position: center;">
+        <div class="col-12 text-center">
             <div class="col-12 p-2">
                 <img (click)="minutePrayer()" class="mr-5" src="./assets/img/forma1.png" width="80px" alt="" style="background-color: #e88531;border-radius: 100%;">
             </div>
@@ -49,10 +49,12 @@
                 <img (click)="readingTime()" class="ml-3" src="./assets/img/forma2.png" width="80px" alt="" style="background-color: #0f3047;border-radius: 100%;">
             </div>
             <div class="col-12 p-2">
-                <img (click)="songs()" class="ml-5" src="./assets/img/forma3.png" width="80px" alt="" style="background-color: #c63a32;border-radius: 100%;">
+                <img (click)="step='plus'" *ngIf="plus!='true'" class="ml-5" src="./assets/img/forma3.png" width="80px" alt="" style="background-color: #c63a32;border-radius: 100%;">
+                <img (click)="songs()" *ngIf="plus=='true'" class="ml-5" src="./assets/img/forma3.png" width="80px" alt="" style="background-color: #c63a32;border-radius: 100%;">
             </div>
             <div class="col-12 p-2">
-                <img (click)="exercises()" class="" src="./assets/img/forma4.png" width="80px" alt="" style="background-color: #f4c05f;border-radius: 100%;">
+                <img (click)="step='plus'" *ngIf="plus!='true'" class="" src="./assets/img/forma4.png" width="80px" alt="" style="background-color: #f4c05f;border-radius: 100%;">
+                <img (click)="exercises()" *ngIf="plus=='true'" class="" src="./assets/img/forma4.png" width="80px" alt="" style="background-color: #f4c05f;border-radius: 100%;">
             </div>
         </div>
 
@@ -237,7 +239,7 @@
 
     <div class="col-12 text-center m-0 p-0" style="height: 90vh;overflow: scroll;">
 
-        <div class="row justify-content-center">
+        <div class="row justify-content-center m-0">
             <div class="col-12 text-end">
                 <button type="button" (click)="step='2'" class="btn-close text-reset pt-3 pr-3"></button>
             </div>
@@ -254,7 +256,7 @@
                 <h5><b>Esta aplicación es sana, edificante para mi vida. Ayuda a mi bienestar físico, emocional y espiritual. Me gusta!</b></h5>
             </div>
             <div class="col-12 text-center">
-                <button type="button" class="btn btn-warning pl-5 pr-5" style="background-color: #f7903c;">Comenzar gratis 4 días</button>
+                <button type="button" (click)="startPlus();plus='true'" class="btn btn-warning pl-5 pr-5" style="background-color: #f7903c;">Comenzar gratis 4 días</button>
             </div>
             <div class="col-12 text-center mt-2">
                 <h3><b>US 5.99/MES</b></h3>

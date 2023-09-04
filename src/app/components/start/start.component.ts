@@ -10,24 +10,34 @@ export class StartComponent implements OnInit {
 
   step:any = '1';
   start:any = 'false';
+  plus:any = 'false';
 
   constructor() { }
 
   ngOnInit(): void {
+
+    this.plus = 'false';
     this.start = localStorage.getItem("start");
+    this.plus = localStorage.getItem("plus");
+
     if (this.start == undefined || this.start=='false') {
       this.step = '1';
       localStorage.setItem("start", "true");
-      setTimeout(()=>{
-        this.step = 'plus';
-      },4000);
     }else{
       this.step = '2';
-      setTimeout(()=>{
-        this.step = 'plus';
-      },4000);
     }
 
+    if (this.plus == undefined || this.plus=='false') {
+      setTimeout(()=>{
+        this.step = 'plus';
+      },5000);
+      localStorage.setItem("plus", "false");
+    }
+
+  }
+
+  ngDoCheck():void{
+    
   }
 
   minutePrayer(){
@@ -92,6 +102,12 @@ export class StartComponent implements OnInit {
         this.step = 'exercises';
       }
     })
+  }
+
+  startPlus(){
+    this.plus = 'true;'
+    this.step = '2';
+    localStorage.setItem("plus", "true");
   }
 
 
