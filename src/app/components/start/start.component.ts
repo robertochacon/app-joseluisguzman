@@ -17,8 +17,6 @@ export class StartComponent implements OnInit {
 
   ngOnInit(): void {
 
-    localStorage.setItem("percent", '0');
-
     this.plus = 'false';
     this.start = localStorage.getItem("start");
     this.plus = localStorage.getItem("plus");
@@ -42,7 +40,7 @@ export class StartComponent implements OnInit {
 
   minutePrayer(){
     Swal.fire({
-      title: 'Minuto de Oracion',
+      title: 'Minuto de Oración',
       text: "Demuestra que tu oracion encenderá la llama",
       color: '#000000',
       background: '#ea9147',
