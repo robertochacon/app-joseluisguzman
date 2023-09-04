@@ -17,6 +17,8 @@ export class StartComponent implements OnInit {
 
   ngOnInit(): void {
 
+    localStorage.setItem("percent", '0');
+
     this.plus = 'false';
     this.start = localStorage.getItem("start");
     this.plus = localStorage.getItem("plus");

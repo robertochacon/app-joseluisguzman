@@ -15,8 +15,7 @@ export class ChatComponent implements OnInit {
 
   ngOnInit(): void {
     let start = [
-      {'msg':'Hola','position':'left'},
-      {'msg':'¿Cómo te sientes hoy en términos de tu bienestar emocional y espiritual?','position':'left'}
+      {'msg':'Hola','position':'left'}
     ]
     this.chatList.push(start);
     

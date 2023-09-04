@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
   constructor(private _authentication: AuthenticationService, private _users: UsersService, private router: Router) { }
 
   ngOnInit(): void {
+    localStorage.setItem("percent", '0');
   }
 
   login(): void{
