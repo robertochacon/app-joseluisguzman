@@ -51,4 +51,10 @@ export class GuideContentsComponent implements OnInit {
     }
   }
 
+  setAdvance(){
+    let percent:any = localStorage.getItem("percent");
+    percent = parseInt(percent)+5;
+    localStorage.setItem("percent", `${percent}`);
+  }
+
 }

@@ -1,18 +1,22 @@
 <div class="fc col-12 bg-color" *ngIf="step=='1'">
 
-    <div class="col-12 justify-content-center m-0 p-0" style="height: 90vh;display: flex;align-items: center;">
+    <div class="col-12 justify-content-center m-0 p-0" style="height: 90vh;">
 
-        <div>
-            <div class="col-12 text-center justify-content-center mt-2">
+        <div class="col-12 text-start pt-2 pl-2">
+            <svg routerLink="/community" xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        </div>
 
+        <div class="col-12 text-center m-0 p-0">
+
+            <div class="col-12 text-center justify-content-center">
                 <h4><b>Comunidad</b></h4>
-
                 <div>
                     <img src="./assets/img/iconllama.png" width="80px" alt="">
                 </div>
                 <img src="./assets/img/sharewithpersons.webp" width="150px" alt="">
             </div>
-            <button type="button" (click)="step='2'" class="btn btn-warning mt-5 pl-5 pr-5"><b>Copiar enlace de invitacion</b></button>
+
+            <button type="button" (click)="step='2'" class="btn btn-warning mt-3 pl-5 pr-5"><b>Copiar enlace de invitacion</b></button>
             <div class="col-12 b text-center mt-4">
                 <qrcode [qrdata]="ipLocal" [width]="150" [errorCorrectionLevel]="'M'"></qrcode>
             </div>

@@ -36,19 +36,16 @@
             <div class="col-12 text-center">
                 <img src="./assets/img/barra.png" width="100%" alt="">
             </div>
-            <div class="alert alert-danger" role="alert" *ngIf="loginError">
-                Su email o su clave esta incorrecta, verifique y vuelva a intentar
-            </div>
             <label for=""><h6>Email</h6></label>
-            <input type="text" [(ngModel)]="email" class="form-control shadow mb-2" maxLength="100" placeholder="Digite su identificacion">
+            <input type="text" [(ngModel)]="email" class="form-control shadow mb-2" maxLength="100" placeholder="Digite su email">
             <label for=""><h6>Contraseñas</h6></label>
             <input type="password" [(ngModel)]="password" class="form-control shadow mb-2" maxLength="100" placeholder="Digite su clave">
             <button *ngIf="!loading" class="btn btn-warning btn-block btn-lg mt-3 shadow" [disabled]="email === '' && password === ''" (click)="login()">
-                Ingresar
+                INGRESAR
             </button>
             <button *ngIf="loading" class="btn btn-warning btn-block btn-lg mt-3 shadow">
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                Ingresando...
+                INGRESANDO...
             </button>
             <div class="col-12 text-center">
                 o
@@ -73,22 +70,19 @@
             <div class="col-12 text-center">
                 <img src="./assets/img/barra.png" width="100%" alt="">
             </div>
-            <div class="alert alert-danger" role="alert" *ngIf="loginError">
-                Su email o su clave esta incorrecta, verifique y vuelva a intentar
-            </div>
             <label for=""><h6>Nombre</h6></label>
-            <input type="text" [(ngModel)]="email" class="form-control shadow mb-2" maxLength="100" placeholder="Digite su nombre">
+            <input type="text" [(ngModel)]="nameRegister" class="form-control shadow mb-2" maxLength="100" placeholder="Digite su nombre">
             <label for=""><h6>Contraseñas</h6></label>
             <label for=""><h6>Email</h6></label>
-            <input type="text" [(ngModel)]="email" class="form-control shadow mb-2" maxLength="100" placeholder="Digite su identificacion">
+            <input type="text" [(ngModel)]="emailRegister" class="form-control shadow mb-2" maxLength="100" placeholder="Digite su email">
             <label for=""><h6>Contraseñas</h6></label>
-            <input type="password" [(ngModel)]="password" class="form-control shadow mb-2" maxLength="100" placeholder="Digite su clave">
-            <button *ngIf="!loading" class="btn btn-warning btn-block btn-lg mt-3 shadow" [disabled]="email === '' && password === ''" (click)="login()">
-                Registrar
+            <input type="password" [(ngModel)]="passwordRegister" class="form-control shadow mb-2" maxLength="100" placeholder="Digite su clave">
+            <button *ngIf="!loading" class="btn btn-warning btn-block btn-lg mt-3 shadow" [disabled]="emailRegister === '' && passwordRegister === ''" (click)="register()">
+                REGISTRAR
             </button>
             <button *ngIf="loading" class="btn btn-warning btn-block btn-lg mt-3 shadow">
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                Registrando...
+                REGISTRANDO...
             </button>
             <div class="col-12 text-center">
                 o

@@ -8,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class AcknowledgmentsComponent implements OnInit {
 
   step:any = '1';
+  percent:any = 0;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.percent = localStorage.getItem("percent");    
   }
+
+  
 
 }

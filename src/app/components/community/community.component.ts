@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class CommunityComponent implements OnInit {
 
   step:any = '1';
+  like:boolean = false;
+  like2:boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {

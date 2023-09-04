@@ -69,6 +69,9 @@
 <div class="fc col-12 bg-color" *ngIf="step=='minutePrayer'">
 
     <div class="col-12 text-center m-0 p-0" style="height: 90vh;">
+        <div class="col-12 text-start pt-2 pl-2">
+            <svg (click)="step='2'" xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        </div>
         <div class="col-12 justify-content-center" style="height: 40vh;display: flex;align-items: center;">
             <img src="./assets/img/oracion.png" width="80%" alt="">
         </div>
@@ -105,6 +108,9 @@
 <div class="fc col-12 bg-color" *ngIf="step=='readingTime'">
 
     <div class="col-12 text-center m-0 p-0" style="height: 90vh;">
+        <div class="col-12 text-start pt-2 pl-2">
+            <svg (click)="step='2'" xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        </div>
         <div class="col-12 text-center" style="height: 40vh;display: flex;align-items: center;">
             <img src="./assets/img/bible.webp" width="100%" alt="">
         </div>
@@ -141,8 +147,11 @@
 <div class="fc col-12 bg-color" *ngIf="step=='songs'">
 
     <div class="col-12 text-center m-0 p-0" style="height: 90vh;">
-        <div class="col-12 text-center" style="height: 40vh;display: flex;align-items: center;">
-            <img src="./assets/img/bible.webp" width="100%" alt="">
+        <div class="col-12 text-start pt-2 pl-2">
+            <svg (click)="step='2'" xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        </div>
+        <div class="col-12 text-center justify-content-center mt-2 mb-2" style="height: 40vh;display: flex;align-items: center;">
+            <img src="./assets/img/canciones.png" width="200px" alt="">
         </div>
         <div class="row justify-content-center p-0 m-0">
             <div class="col-5 p-2">
@@ -177,6 +186,9 @@
 <div class="fc col-12 bg-color" *ngIf="step=='exercises'">
 
     <div class="col-12 text-center m-0 p-0" style="height: 90vh;">
+        <div class="col-12 text-start pt-2 pl-2">
+            <svg (click)="step='2'" xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        </div>
         <div class="col-12 justify-content-center" style="height: 40vh;display: flex;align-items: center;">
             <div>
                 <div class="col-12 text-center">
@@ -300,6 +312,11 @@
         <div class="d-flex align-items-center mt-1">
             <div class="col-0"><img src="./assets/img/configurar.png" width="50px" alt=""></div>
             <div class="col-0">Configuración</div>
+        </div>
+
+        <div class="d-flex align-items-center mt-1">
+            <div class="col-0 ml-1" (click)="salir()"><img src="./assets/img/off.png" width="40px" alt=""></div>
+            <div class="col-0" (click)="salir()">Salir</div>
         </div>
 
     </div>

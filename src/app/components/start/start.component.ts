@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -12,7 +13,7 @@ export class StartComponent implements OnInit {
   start:any = 'false';
   plus:any = 'false';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
 
@@ -36,9 +37,6 @@ export class StartComponent implements OnInit {
 
   }
 
-  ngDoCheck():void{
-    
-  }
 
   minutePrayer(){
     Swal.fire({
@@ -110,5 +108,14 @@ export class StartComponent implements OnInit {
     localStorage.setItem("plus", "true");
   }
 
+  salir(){
+
+    localStorage.removeItem("user_id");
+    localStorage.removeItem("name");
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
+    this.router.navigate(['/login']);
+
+  }
 
 }
